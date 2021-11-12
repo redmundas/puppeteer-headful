@@ -9,6 +9,8 @@ LABEL "repository"="https://github.com/mujo-code/puppeteer-headful"
 LABEL "homepage"="https://github.com/mujo-code/puppeteer-headful"
 LABEL "maintainer"="Jacob Lowe"
 
+RUN curl -f https://get.pnpm.io/v6.js | node - add --global pnpm
+
 RUN  apt-get update \
      # See https://crbug.com/795759
      && apt-get install -yq libgconf-2-4 \
